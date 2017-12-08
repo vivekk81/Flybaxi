@@ -1,0 +1,88 @@
+{% load staticfiles %}
+
+<div class="home-page" style="background-image: url('/static/images/b6.jpg/');">
+		<div class="container">
+			<div id="home-row-1" class="row clearfix">
+				<div class="col-12">
+					<h1 class="font-semibold" style="color:oldlace">FLYBAXI</h1>
+					<h4 class="font-thin" style="color:honeydew">We are an <span class="font-semibold">independent interactive agency</span> based in Jaipur</h4>
+					<br>
+					<br>
+				</div><!-- /col-12 -->
+			</div><!-- /row -->
+			<div id="home-row-2" class="row clearfix">
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="4"><img src="/static/images/s02.png" /></div><span style="color:lightyellow">PLAN</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="3"><img src="/static/images/s02.png" /></div><span style="color:lightyellow">PICK</span></div>
+				<div class="col-12 col-sm-4"><div class="home-hover navigation-slide" data-slide="5"><img src="/static/images/s03.png" /></div><span style="color:lightyellow">START</span></div>
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide1 -->
+	
+	<!-- === Slide 2 === -->
+	<div class="home-slide2">
+		<div class="container">
+			<div class="row title-row">
+				<div class="col-12 font-thin">
+
+
+ <span class="font-semibold">Your four step journey to an awesome ride!</span></div>
+			</div><!-- /row -->
+			<div class="row line-row">
+				<div class="hr">&nbsp;</div>
+			</div><!-- /row -->
+			<div class="row subtitle-row">
+				<div class="col-12 font-thin">This is what <span class="font-semibold">we do best</span></div>
+			</div><!-- /row -->
+			<div class="row content-row">
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="fa fa-eye fa-4x"></i></p>
+					<h2 class="font-thin">Free <span class="font-semibold">Booking</span></h2>
+					<h4 class="font-thin">Book a vehicle in less than a minute .</h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="fa fa-motorcycle fa-4x"></i></p>
+					<h2 class="font-thin">Assured <span class="font-semibold">Quality</span></h2>
+					<h4 class="font-thin">All our vehiles are new and go through strictest service schedule. </h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="fa fa-money fa-4x"></i></p>
+					<h2 class="font-thin">Lowest <span class="font-semibold">Price</span></h2>
+					<h4 class="font-thin">Hire a motorcycle lower than our quoted price and get a ride with us for free.</h4>
+				</div><!-- /col12 -->
+				<div class="col-12 col-lg-3 col-sm-6">
+					<p><i class="fa fa-medkit fa-4x">
+					</i>  </p>
+					<h2 class="font-thin">Free <span class="font-semibold">Helmet</span></h2>
+					<h4 class="font-thin">Safety comes first for FlyBaxi. We provide complimentary helmets for each ride.</h4>
+				</div><!-- /col12 -->
+			</div><!-- /row -->
+		</div><!-- /container -->
+	</div><!-- /slide2 -->
+    <div class="container text-center">
+     <div style="align=center center;"><h2 style="font-family=Lobster;">Our Fleet</h2></div>
+    </div>
+
+
+
+<div class="container" id="fleet">
+			<div class="product-top">
+                         <div ng-repeat="bike in bikes">
+				<div class="product-one" >
+					<div class="col-md-3 product-left" style="padding-bottom:1%">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="#/single/{{bike.bikeid}}" class="mask"><img class="img-responsive zoom-img" src={{bike.bikeimage}} alt="" ng-click="setSelection()"/></a>
+							<div class="product-bottom">
+								<h3>{{bike.bikename}}</h3>
+								<p >Explore</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">Rs.{{bike.rentbelow12}}/hr</span></h4>
+							</div>
+							
+						</div>
+					</div>
+                </div>
+           </div>
+            </div>
+</div>          	
+
+
+

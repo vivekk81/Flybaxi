@@ -1,0 +1,575 @@
+{% load static %}
+
+<!doctype html>
+<html  ng-app="indexapp">
+<head lang="en">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<title>FlyBaxi</title> 
+	<meta name="description" content=" Handsome Bootstrap Themes" />	    
+	<meta name="keywords" content="themes, bootstrap, free, templates, bootstrap 3">
+	<meta property="og:title" content="">
+        <!-- <script src="{% static 'js/index.js' %}"></script>  -->
+        <link rel="stylesheet" href="../static/css/style.css" type="text/css" />
+        <link rel="stylesheet" href="../static/css/single.css" type="text/css" />
+        <!-- <script src="{% static 'js/minpageroute.js' %}"></script> -->
+        <!-- <script src="{% static 'js/example.js' %}"></script>  -->
+        <link rel="stylesheet" href="../static/css/bootstrap.min.css" type="text/css" />
+         <!-- <link rel="stylesheet" href="../static/css/ss.css" type="text/css" /> -->
+        <!-- <script src="{% static 'js/main.js' %}"></script> --> 
+        <link rel="stylesheet" href="../static/fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" />
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="../static/css/cards.css" type="text/css" />
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-animate.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-sanitize.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+        <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.4.0.js"></script>
+
+        <link rel="stylesheet" href="../static/css/p3.css" />
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+
+
+      
+	<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="fancybox/jquery.fancybox-v=2.1.5.css" type="text/css" media="screen">
+       <link rel="stylesheet" href="css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="file:///home/liquid/Documents/Munter/cards.css" >
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/single.css">
+	-->
+	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,600,300,200&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- <script src="file:///home/sandii/Documents/Munter/Theme/js/index.js"></script> -->
+
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap-datepicker.css">
+
+		
+</head>
+
+<body  >
+	    
+     
+	<div class="navbar navbar-fixed-top">
+		<div class="container">
+		
+			<!-- .navbar-toggle is used as the toggle for collapsed navbar content -->
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			
+			
+			<div ng-controller="MainCtrl" class="nav-collapse collapse navbar-responsive-collapse">
+				<ul class="nav row">
+					<li class="col-12 col-sm-2"><a href='' ng-click='go()' title="Next Section"><span class="icon icon-home"></span> <span class="text">HOME</span></a></li>
+					<li class="col-12 col-sm-2" style="float:right"><a id="menu-link-6" href="#" title="Next Section"><span class="fa fa-mobile fa-lg"></span> <span class="text">CALL US: 9351000123, 9352000123</span></a></li>
+				</ul>
+				<div class="row">
+					<div class="col-sm-2 active-menu"></div>
+				</div>
+			</div><!-- /.nav-collapse -->
+		</div><!-- /.container -->
+	</div><!-- /.navbar -->
+
+	
+	
+	<!-- === Arrows === -->
+	<!-- <div id="arrows">
+		<div id="arrow-up" class="disabled"></div>
+		<div id="arrow-down"></div>
+		<div id="arrow-left" class="disabled visible-lg"></div>
+		<div id="arrow-right" class="disabled visible-lg"></div>
+	</div> --><!-- /.arrows -->
+	
+	
+	<!-- === MAIN Background === -->
+	
+   	 		
+           
+	  <div ng-view></div>
+
+<script>
+var app = angular.module("indexapp", ['ngAnimate', 'ngSanitize','ui.bootstrap','ngRoute','ngMaterial', 'ngMessages']);
+app.config(function($routeProvider) {
+    $routeProvider
+    .when("/", {
+        templateUrl : "/static/homepage.html",
+        controller : "homeCtrl"
+    })
+    .when("/single", {
+        templateUrl : "/static/single.html",
+        controller : "singleCtrl"
+    })
+    .when("/single/:bikeid", {
+        templateUrl : "/static/single.html",
+        controller : "singleDetailsCtrl"
+    })
+    .when("/totalprice", {
+        templateUrl : "/static/totalprice.html",
+        controller : "totalpriceCtrl"
+    });
+});
+
+app.controller("homeCtrl", function ($scope,$http) {
+    $http.get("/getbikes")
+    .then(function(response) {
+        //var bikes;
+        $scope.bikes = response.data.records;
+       // alert(bikes[0].bikename);
+    });
+});
+app.controller("singleCtrl", function ($scope) {
+   
+});
+
+app.controller('MainCtrl', function($scope, $location) {
+  $scope.go = function() {
+    $location.path('/')
+  }
+});
+
+app.controller("totalpriceCtrl", function ($scope,$mdDialog, $mdMedia,$rootScope,$location,$window) {
+
+   $scope.status = '  ';
+  $scope.customFullscreen = $mdMedia('xs') || $mdMedia('sm');
+
+   $scope.gos = function ( path ) {
+      alert("slknknsdkfn");
+  };
+  
+    // Appending dialog to document.body to cover sidenav in docs app
+    // Modal dialogs should fully cover application
+    // to prevent interaction outside of dialog
+     $scope.totalcost=0;
+     $scope.priceshow=0;
+     $scope.selected =$rootScope.selectedbike;
+    $scope.getdiff = function()
+    {
+     var diffMonth = ($rootScope.dt1).getMonth()-($rootScope.dt).getMonth();
+     var diffDate =($rootScope.dt1).getDate()-($rootScope.dt).getDate();
+     var fromHour = parseFloat($rootScope.fromHour);
+     var toHour = parseFloat($rootScope.toHours);
+    
+     
+     var totalhours;
+     var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds    
+     var diffDays = Math.round(Math.abs((($rootScope.dt1).getTime() - ($rootScope.dt).getTime())/(oneDay)));
+     if(diffDays>0)
+      {
+        totalhours=24-fromHour;
+        totalhours = totalhours+toHour;
+        totalhours = totalhours+24*(diffDays-1);
+      }
+      else{
+           totalhours = toHour-fromHour;
+        }
+     
+     $scope.totalhr = totalhours;
+     var mincharge = "";
+
+     if($scope.totalhr < 3){
+      totalhours = 3;
+      mincharge = " (Min. Charge)"
+     }
+      
+  
+    //calculate price
+    if(totalhours<=23)
+    {
+     var totalcost=($rootScope.selectedbike.rentbelow12)*totalhours;
+     $scope.totalcost= (totalcost+(totalcost*0.06))+mincharge
+     $scope.priceshow = $rootScope.selectedbike.rentbelow12;  
+    
+    }
+    else
+    {
+      var totalcost=($rootScope.selectedbike.rentbelow15)*totalhours;
+      $scope.totalcost= totalcost+(totalcost*0.06)
+      $scope.priceshow = $rootScope.selectedbike.rentbelow15;
+    }
+
+    
+       
+    }
+    $scope.getdiff();
+
+    //for sms data
+    $scope.sendSms = function(){
+       
+     }
+
+
+   
+  $scope.showAdvanced = function(ev) {
+    var useFullScreen = ($mdMedia('sm') || $mdMedia('xs'))  && $scope.customFullscreen;
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: '/static/m.tmpl.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: useFullScreen
+    })
+    .then(function(answer) {
+      $scope.status = 'You said the information was "' + answer + '".';
+    }, function() {
+      $scope.status = 'You cancelled the dialog.';
+    });
+    $scope.$watch(function() {
+      return $mdMedia('xs') || $mdMedia('sm');
+    }, function(wantsFullScreen) {
+      $scope.customFullscreen = (wantsFullScreen === true);
+    });
+  };
+ 
+$scope.h = function(path)
+{
+
+}
+
+    
+   
+
+
+function DialogController($scope, $mdDialog) {
+  $scope.hide = function() {
+    $mdDialog.hide();
+  };
+  $scope.cancel = function() {
+    $mdDialog.cancel();
+  };
+  $scope.answer = function(answer) {
+    $mdDialog.hide(answer);
+  };
+  $scope.go = function(path)
+  {
+   
+   $mdDialog.hide();
+   $window.location.href = path;
+  };
+}
+
+});
+
+app.controller('AppCtrl', function() {
+  this.myDate = new Date();
+  this.endDate = new Date();
+  this.minEndDate = new Date();
+  this.endDateDisable = 'true';
+
+  this.minDate = new Date(
+    this.myDate.getFullYear(),
+    this.myDate.getMonth(),
+    this.myDate.getDate()
+  );
+
+  this.maxDate = new Date(
+    this.myDate.getFullYear(),
+    this.myDate.getMonth(),
+    this.myDate.getDate()+ 31
+  );
+
+
+  this.startDate = function(){
+    this.minEndDate = new Date(
+      this.myDate.getFullYear(),
+      this.myDate.getMonth(),
+      this.myDate.getDate()
+  );
+    console.log(this.minEndDate);
+  }
+  this.onlyWeekendsPredicate = function(date) {
+    var day = date.getDay();
+    return day === 0 || day === 6;
+  };
+});
+
+
+app.controller("singleDetailsCtrl", function ($scope,$http,$routeParams,$rootScope) {
+   
+    $http({
+           url:"/getselectedbike/"+$routeParams.bikeid,
+           //params:{bikeid:$routeParams.bikeid},
+           method : "GET"
+      })
+       .then(function(response){
+        $scope.selectedbike = response.data.records; 
+        $rootScope.selectedbike = response.data.records;
+      })
+ 
+    $scope.today = function() {
+    $scope.dt1 = new Date();
+    $scope.dt = new Date();
+     
+  };
+  $scope.today();
+
+  $scope.clear = function() {
+    $scope.dt = null;
+    $scope.dt1 = null;
+    
+  };
+
+  $scope.inlineOptions = {
+    customClass: getDayClass,
+    minDate: new Date(),
+    showWeeks: true
+  };
+
+  $scope.dateOptions = {
+   // dateDisabled: disabled,
+    formatYear: 'yy',
+    maxDate: new Date(2020, 5, 22),
+    minDate: new Date(),
+    startingDay: 1
+  };
+
+ 
+  $scope.toggleMin = function() {
+    $scope.inlineOptions.minDate = $scope.inlineOptions.minDate ? null : new Date();
+    $scope.dateOptions.minDate = $scope.inlineOptions.minDate;
+  };
+
+  $scope.toggleMin();
+
+  $scope.open1 = function() {
+    $scope.popup1.opened = true; 
+    };
+
+  $scope.open2 = function() {
+    $scope.popup2.opened = true;
+    
+  };
+    
+  $scope.setDate = function(year, month, day) {
+    $scope.dt = new Date(year, month, day);
+    $scope.dt1 = new Date(year, month, day);
+    
+  };
+
+  $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+  $scope.format = $scope.formats[0];
+  $scope.altInputFormats = ['M!/d!/yyyy'];
+
+  $scope.popup1 = {
+    opened: false
+  };
+
+  $scope.popup2 = {
+    opened: false
+  };
+
+  
+
+
+
+  var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  var afterTomorrow = new Date();
+  afterTomorrow.setDate(tomorrow.getDate() + 1);
+  $scope.events = [
+    {
+      date: tomorrow,
+      status: 'full'
+    },
+    {
+      date: afterTomorrow,
+      status: 'partially'
+    }
+  ];
+
+  $rootScope.d = $scope.dt;
+ 
+  function getDayClass(data) {
+    var date = data.date,
+      mode = data.mode;
+    if (mode === 'day') {
+      var dayToCheck = new Date(date).setHours(0,0,0,0);
+
+      for (var i = 0; i < $scope.events.length; i++) {
+        var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
+
+        if (dayToCheck === currentDay) {
+          return $scope.events[i].status;
+        }
+      }
+    }
+
+    return '';
+  }
+
+});
+
+</script>
+
+		
+<!--product-starts-->
+<!--
+	<div class="product"> 
+		<div class="container">
+			<div class="product-top">
+				<div class="product-one" >
+					<div class="col-md-3 product-left" style="float:left; position:relative !important;">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="file:///home/sandii/Desktop/images2.jpeg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>Bikes</h3>
+								<p>Explore Now</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$329</span></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-3 product-left" style="float:left; position:relative;">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="file:///home/sandii/Desktop/images3.jpeg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>Royal Enfield</h3>
+								<p>Explore Now</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-3 product-left" style="float:left; position:relative ;">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="file:///home/sandii/Desktop/images4.jpeg"  alt="" /></a>
+							<div class="product-bottom">
+								<h3>Bikes</h3>
+								<p>Explore Now</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-3 product-left">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="file:///home/sandii/Desktop/images1.jpeg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>Bikes</h3>
+								<p>Explore Now</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="product-one">
+					<div class="col-md-3 product-left" style="float:left; position:relative ;">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="file:///home/sandii/Desktop/images4.jpeg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>Bikes</h3>
+								<p>Explore Now</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-3 product-left" style="float:left; position:relative !important;">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="file:///home/sandii/Desktop/index1.jpeg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>Royal Enfield</h3>
+								<p>Explore Now</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-3 product-left" style="float:left; position:relative !important;">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="file:///home/sandii/Desktop/images3.jpeg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>Royal Enfiled</h3>
+								<p>Explore Now</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="col-md-3 product-left">
+						<div class="product-main simpleCart_shelfItem">
+							<a href="single.html" class="mask"><img class="img-responsive zoom-img" src="file:///home/sandii/Desktop/index2.jpeg" alt="" /></a>
+							<div class="product-bottom">
+								<h3>Bikes</h3>
+								<p>Explore Now</p>
+								<h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+							</div>
+							
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>					
+			</div>
+		</div>
+	</div>
+      -->
+	<!--product-end-->
+
+   
+  
+<div class="fh5co-footer-style-3">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-4 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">
+						<div class="fh5co-logo"><span class="logo">V</span>Vivek</div>
+						<p class="fh5co-copyright">&copy; 2017 Voltage. <br>All Rights Reserved. <br>Designed by <a target="_blank" href="#">Arusha</a> <br>Created with <a target="_blank" href="#">Cards</a> <br> 
+						</p>
+					</div>
+					<div class="col-md-3 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay=".8s">
+						<h3>Company</h3>
+						<ul class="fh5co-links">
+							<li><a href="#/">Terms and conditions</a></li>
+							<li><a href="#/">FAQS</a></li>
+							<li><a href="#/">Contact</a></li>
+						</ul>
+					</div>
+					
+					<div class="col-md-4 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.1s">
+						<h3>Connect</h3>
+						<ul class="fh5co-links fh5co-social">
+							<li><a href="https://facebook.com/flybaxi/"><i class="fa fa-facebook"></i> Facebook</a></li>
+							<!-- <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+							<li><a href="#"><i class="fa fa-dribbble"></i> Dribbble</a></li>
+							<li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li> -->
+						</ul>
+					</div>
+					<div class="col-md-4 col-sm-6 fh5co-footer-widget wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.4s">
+						<h3>About</h3>
+						<p>Far far away, We provide the best and fast services </p>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+</div>
+
+		<!-- END footer -->
+
+	
+</body>
+
+	<!-- SCRIPTS -->
+	<script src="../static/js/html5shiv.js"></script>
+	<script src="../static/js/jquery-1.10.2.min.js"></script>
+	<script src="../static/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="../static/js/bootstrap.min.js"></script>
+	<script src="../static/js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="../static/fancybox/jquery.fancybox.pack-v=2.1.5.js"></script>
+	<script src="../static/js/script.js"></script>
+	
+	<!-- fancybox ini -->
+
+</html>

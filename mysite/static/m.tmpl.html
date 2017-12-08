@@ -1,0 +1,119 @@
+
+ <div class="md-dialog-container ng-scope" style="top:0px;height:500px;" tabindex="-1">
+  <div class="md-dialog-focus-trap" tabindex="0"></div>
+  <md-dialog id="login_dialog_parent" class="login-dialog">
+     <div class="login_dialog_row layout-xs-column layout-gt-xs-row" layout-gt-xs="row" layout-xs="column">
+       <div class="login_win_30 flex-xs-100 flex-gt-xs-30" flex-gt-xs="30" flex-xs="100">
+        <div class="login_win_30_box layout-align-center-center layout-column" layout="column" layout-align="center center">
+          <div class="cross_login_box1 hide-gt-xs" tabindex="0" >
+            <button class="cross_login_box_btn1">
+              <span class="glyphicon glyphicon-remove"></span>
+            </button>
+          </div>
+          <div aria-hidden="false">
+           <h2 class="hide-xs" hide-xs="">LOGIN</h2>
+           <img src="/static/images/man.svg" />
+           <p class="login_30_text hide-xs" hide-xs="">Please provide your details.</p>
+          </div>
+       </div>
+     </div>
+    
+
+<div layout="column" ng-cloak>
+
+<md-dialog-content >
+      <md-tabs md-dynamic-height md-border-bottom>
+        <md-tab label="Login">
+          <md-content class="md-padding">
+                 <form name="projectForm">
+
+     
+      <div layout="row">
+        <md-input-container flex="30">
+          <label>Name</label>
+          <input required name="clientName" ng-model="project.clientName">
+          <div ng-messages="projectForm.clientName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+
+        
+      </div>
+
+      <md-input-container class="md-block">
+        <label>Mobile No.</label>
+        <input required  name="clientEmail" ng-model="project.clientEmail"
+               minlength="10" maxlength="10"/>
+
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>Address</label>
+        <input required type="text" step="any" name="rate" ng-model="project.rate"  />
+
+        
+      </md-input-container>
+
+      <div>
+        <md-button type="submit" ng-click="go('/')">Submit</md-button>
+      </div>
+
+    </form>
+                        
+          </md-content>
+        </md-tab>
+        <md-tab label="Signup">
+          <md-content class="md-padding">
+              <form name="projectForm">
+
+     
+      <div layout="row">
+        <md-input-container flex="50">
+          <label>Name</label>
+          <input required name="clientName" ng-model="project.clientName">
+          <div ng-messages="projectForm.clientName.$error">
+            <div ng-message="required">This is required.</div>
+          </div>
+        </md-input-container>
+
+        
+      </div>
+      
+      <md-input-container class="md-block">
+        <label>Mobile No.</label>
+        <input required  name="clientEmail" ng-model="project.clientEmail"
+               minlength="10" maxlength="10"/>
+
+      </md-input-container>
+
+      <md-input-container class="md-block">
+        <label>DL No.</label>
+        <input required type="text" step="any" name="dlNo" ng-model="project.dlno"  />
+      </md-input-container>
+     
+      <md-input-container class="md-block">
+        <label>Password</label>
+        <input required type="password" step="any" name="rate" ng-model="project.rate"  />
+      </md-input-container>
+      
+      <div>
+        <md-button type="submit" ng-click="go('/')">Submit</md-button>
+      </div>
+
+    </form>
+                          
+          </md-content>
+        </md-tab>
+      </md-tabs>
+    </md-dialog-content>
+
+ 
+</div>
+
+
+
+   </div>
+</md-dialog>
+</div>
+
+

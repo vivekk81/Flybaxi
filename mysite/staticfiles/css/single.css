@@ -1,0 +1,164 @@
+/*from gaurated*/
+.item_box {
+    margin-bottom: 4%;
+}
+.layout-wrap {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.layout-row {
+    -webkit-box-orient: horizontal;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+.layout-column, .layout-row {
+    -webkit-box-direction: normal;
+}
+.layout, .layout-column, .layout-row {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.layout-gt-xs-row > .flex-gt-xs-100 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+.product_price_name {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    font-size: 1.5em;
+    width: 100%;
+}
+.product_price_text {
+    font-size: 2.9em;
+    margin: 0;
+}
+
+layout-gt-xs-column > .flex-gt-xs-100, .layout-gt-xs-row > .flex-gt-xs-100 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width: 100%;
+    max-height: 100%;
+    box-sizing: border-box;
+}
+.product_deposit {
+    margin: 20px 20px 0 0;
+}
+.deposit_head {
+    display: inline;
+}
+p {
+    margin: 0 0 10px;
+}
+.product_deposit_text {
+    display: inline;
+}
+.full button span {
+    background-color: limegreen;
+    border-radius: 32px;
+    color: black;
+  }
+  .partially button span {
+    background-color: orange;
+    border-radius: 32px;
+    color: black;
+  }
+  .dwidth{
+    width: 20px;
+  }
+  
+  .price-book-cart {
+    background: #f78828;
+    border: 1px solid #da7532;
+    border-radius: 4px;
+    outline: 0;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-shadow: 0 0 1px rgba(0,0,0,0.33);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 18px;
+    line-height: 25px;
+    width: 200px;
+    padding: 10px 0px;
+}
+.next_step_btn {
+    background-color: #9684fd !important;
+    color: #fff !important;
+    width: 40%;
+    margin: 10px 0;
+   
+    box-sizing: border-box;
+}
+
+
+.contact {
+    padding: 5em 0px;
+}
+
+.single {
+    padding: 3em 0;
+}
+.tabs {
+    margin-top: 4em;
+}
+.latestproducts {
+    margin-top: 3.5em;
+}
+.product-left {
+    text-align: center;
+}
+.s{
+    padding-top: 0em;
+   
+    
+}
+
+.da{
+    background-color: #c2d6d6;
+    padding-top: 5em;
+    height: 21em;
+}
+.x{
+   height: 70%;
+    width: 100%;
+}
+.dealer-name {
+    padding: 3px 0px;
+    font-size: 13px;
+    color: #c2c2c2;
+}
+.product1-image {
+    float: left;
+    width: 35%;
+    vertical-align: top;
+    padding: 15px;
+    text-align: center;
+}
+
+.product1-data {
+    float: left;
+    width: 65%;
+    padding: 20px;
+        padding-top: 20px;
+        padding-right: 20px;
+        padding-bottom: 20px;
+        padding-left: 20px;
+}
+
+.product1-data h1 {
+    color: #424242;
+    font-weight: bolder;
+    font-size: 24px;
+    text-shadow: 1px 1px #929292;
+}

@@ -1,0 +1,3 @@
+Django
+olefile==0.44
+Pillow==4.2.1

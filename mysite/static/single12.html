@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<div class="single contact">
+	<div class="container">
+	    <div class="row contact">
+       <div class="col-md-6">
+        <img src={{selectedbike.bikeimage}} data-imagezoom="true" class="x img-responsive"  alt=""/> 
+       </div>
+			    <div class="col-md-6">
+						<div class="produc1-data">
+						  <h1 style="color: #424242;">{{selectedbike.bikename}}</h1> 
+						  <div class="product-price">							
+						    <p class="product_price_text">RS {{selectedbike.rentbelow12}}/hour</p>
+					 	  </div>
+
+							<div class="product_deposit">
+							  <p class="deposit_head">SECURITY DEPOSIT:</p>
+								<p class="product_deposit_text">NO</p>
+							</div>
+
+							<div class="product_min">
+							  <p class="deposit_head">MIN DURATION:</p>
+							  <p class="product_deposit_text">3HRS</p>
+							</div>
+							<!-- start date start -->
+							<div class="product_deposit">
+							  <p class="deposit_head">
+  								<p class="input-group">
+
+                		<div layout="row">           
+                      <div class="col-md-9">
+                    	  <md-content ng-controller="AppCtrl as ctrl" layout-padding ng-cloak>
+                            <md-datepicker ng-model="ctrl.myDate" md-placeholder="Start date"
+                                md-min-date="ctrl.minDate" md-max-date="ctrl.maxDate" ng-change='ctrl.startDate()'></md-datepicker>
+                        </md-content>
+                      </div>
+                      <div class="col-md-3">
+            					<select name="pick_time" id="_pick_time" class="form-control" ng-model="$root.fromHour">
+                        <option value="09" >09:00 AM</option>
+                        <option value="10" >10:00 AM</option>
+                        <option value="11" >11:00 AM</option>
+                        <option value="12" >12:00 PM</option>
+                        <option value="13" >01:00 PM</option>
+                        <option value="14" selected>02:00 PM</option>
+                        <option value="15" >03:00 PM</option>
+                        <option value="16" >04:00 PM</option>
+                        <option value="17" >05:00 PM</option>
+                        <option value="18" >06:00 PM</option>
+                        <option value="19" >07:00 PM</option>
+                        <option value="20" >08:00 PM</option>
+                        <option value="21" >09:00 PM</option>
+                        </select>
+                       </div>
+                    </div>
+                  </p>
+							  </p>
+							</div>
+							<!-- start date finish -->
+
+              <!-- end date start -->
+
+              <!-- end date finish -->
+						</div>
+							<div style="padding-top: 40px;">
+							  <a href="#/totalprice">
+                  <div class="price-book-cart">
+                    CONTINUE
+                  </div>
+                </a>
+              </div>							
+					</div>	
+      </div>    
+	</div>  
+</div> 
+<!--main layout starts -->
+<section id="items" class="ng-scope">	
+</section>
